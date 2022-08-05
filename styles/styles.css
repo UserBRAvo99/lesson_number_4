@@ -38,6 +38,9 @@ h1, h2, h3, h4, ul, p {
     --border-bottom-color-header: #ECECEC;
     --background-button-hover: #188CE8;
     --features-title-background-before: #F5F4FA;
+    --clients-link-color: #AFB1B8;
+    --team-link-color: #AFB1B8;
+    --background-soc-link-footer: rgba(255, 255, 255, 0.1);
 }
 /* container - ширина контенту відповідає макету 1200рх + треба врахувати гаттери 30рх (по 15 з кожного боку), в данному випадку треба відняти від зазначеного розміру */
 .container {
@@ -318,7 +321,7 @@ body {
     margin-right: 0;
 }
 .team_text {
-    padding: 30px 20px 30px 20px;
+    padding: 30px 32px 30px 32px;
 }
 .team_title {
     font-weight: 500;
@@ -333,12 +336,92 @@ body {
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
+    margin-bottom: 16px;
 }
+/* Іконки для соц мереж команди */
+.team_soc {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.team_soc_link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.team_soc_icon {
+    fill: var(--team-link-color);
+}
+.team_soc_link:hover, .team_soc_link:focus{
+    background-color: var(--accent-color);
+}
+/* Дя того щоб змінити колір іконки при наведенні, треба вказити ховер на посилання і замінити колір іконки. Також можна наслідувати колір батька через fill-currentColor (колір посилання без ховеру) і змінити колір фону та іконки через клас посилання(не прописувати код окремо) */
+.team_soc_link:hover .team_soc_icon,
+.team_soc_link:focus .team_soc_icon {
+    fill: var(--primary-background-color);
+}
+
+
+
+/* Секція кліентів */
+.clients_title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #212121;
+
+    margin-bottom: 50px;
+}
+.clients_list {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.clients_link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+
+    margin-left: 15px;
+    margin-right: 15px;
+
+    border: 1px solid var(--clients-link-color);
+    border-radius: 4px;
+
+    align-items: center;
+    justify-content: space-around;
+
+}
+.clients_icon {
+    fill: var(--clients-link-color);
+}
+.clients_link:hover, .clients_link:focus {
+    border: 1px solid var(--accent-color);
+}
+.clients_link:hover .clients_icon, .clients_link:focus .clients_icon {
+    fill: var(--accent-color);
+}
+
 /* Футер для сторінок Студія та Прортфоліо */
 /* footer - Підвал веб-сайту */
 .footer {
     background-color: var(--second-primary-background);
     padding: 60px 0;
+}
+.container_footer {
+    display: flex;
+}
+.address_section {
+    margin-right: 70px;
 }
 /* Лого */
 .footer_logo {
@@ -377,6 +460,47 @@ body {
 .address_map:hover, .address_map:focus, .address_link:hover, .address_link:focus {
     color: var(--accent-color);
 }
+
+/* footer частина з посиланнями на соц мережі */
+.address_soc_link {
+    padding-top: 12px;
+}
+.footer_title_soc {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: var(--primary-text-white);
+
+    margin-bottom: 20px;
+}
+.footer_list_soc {
+    display: flex;
+    min-width: 206px;
+    min-height: 44px;
+    gap: 10px;
+}
+.footer_soc_link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    background: var(--background-soc-link-footer);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer_soc_icon {
+    fill: var(--primary-background-color);
+}
+
+.footer_soc_link:hover, .footer_soc_link:focus {
+    background-color: var(--accent-color);
+}
+
 /* ____ПОРТФОЛІО____ */
 /* Блок фільтер */
 .filter_list {
