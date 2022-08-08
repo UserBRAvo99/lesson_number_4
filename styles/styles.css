@@ -170,7 +170,7 @@ body {
 .contacts_link:focus .contacts_icon {
     fill: var(--accent-color);
 }
-
+/* Іконки для контактів в навігаційному блоці */
 .contacts_icon {
     display: flex;
     margin-right: 10px;
