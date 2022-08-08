@@ -158,13 +158,33 @@ body {
     letter-spacing: 0.02em;
     color: var(--second-text-gray);
 
-    display: block;
+    display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
+    
 }
 .contacts_link:hover, .contacts_link:focus {
     color: var(--accent-color);
 }
+.contacts_link:hover .contacts_icon ,
+.contacts_link:focus .contacts_icon {
+    fill: var(--accent-color);
+}
+
+.contacts_icon {
+    display: flex;
+    margin-right: 10px;
+    fill: var(--second-text-gray);
+}
+.smartphone {
+    width: 10px;
+    height: 16px;
+}
+.envelope {
+    width: 16px;
+    height: 12px;
+}
+
 /* ___СТУДІЯ____ */
 /* Блок герой */
 .hero {
@@ -235,28 +255,14 @@ body {
 .features_list .features_item:nth-child(4n) {
     margin-right: 0;
 }
-.features_title::before {
-    display: block;
-    content: '';
+.features_icon_bloc {
+    display: flex;
     height:120px;
     background: var(--features-title-background-before);
     border-radius: 4px;
-    background-repeat: no-repeat;
-    background-position: center;
+    align-items: center;
 
     margin-bottom: 30px;
-}
-.icon_plate::before {
-    background-image: url(../images/plate.png);
-}
-.icon_watch::before {
-    background-image: url(../images/clock.png);
-}
-.icon_laptop::before {
-    background-image: url(../images/laptop.png);
-}
-.icon_astronaut::before {
-    background-image: url(../images/astronaut.png);
 }
 
 .features_title {
