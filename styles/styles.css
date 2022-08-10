@@ -161,20 +161,15 @@ body {
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
-    
+    fill: currentColor;
 }
 .contacts_link:hover, .contacts_link:focus {
     color: var(--accent-color);
-}
-.contacts_link:hover .contacts_icon ,
-.contacts_link:focus .contacts_icon {
-    fill: var(--accent-color);
 }
 /* Іконки для контактів в навігаційному блоці */
 .contacts_icon {
     display: flex;
     margin-right: 10px;
-    fill: var(--second-text-gray);
 }
 .smartphone {
     width: 10px;
@@ -261,6 +256,7 @@ body {
     background: var(--features-title-background-before);
     border-radius: 4px;
     align-items: center;
+    justify-content: space-around;
 
     margin-bottom: 30px;
 }
@@ -358,12 +354,12 @@ body {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-}
-.team_soc_icon {
-    fill: var(--team-link-color);
+    color: var(--team-link-color);
+    fill: currentColor;
 }
 .team_soc_link:hover, .team_soc_link:focus{
     background-color: var(--accent-color);
+    color: var(--primary-text-white);
 }
 /* Дя того щоб змінити колір іконки при наведенні, треба вказити ховер на посилання і замінити колір іконки. Також можна наслідувати колір батька через fill-currentColor (колір посилання без ховеру) і змінити колір фону та іконки через клас посилання(не прописувати код окремо) */
 .team_soc_link:hover .team_soc_icon,
@@ -406,17 +402,14 @@ body {
     align-items: center;
     justify-content: space-around;
 
-}
-.clients_icon {
-    fill: var(--clients-link-color);
+    color: var(--team-link-color);
+    fill: currentColor;
+
 }
 .clients_link:hover, .clients_link:focus {
     border: 1px solid var(--accent-color);
+    color: var(--accent-color);
 }
-.clients_link:hover .clients_icon, .clients_link:focus .clients_icon {
-    fill: var(--accent-color);
-}
-
 /* Футер для сторінок Студія та Прортфоліо */
 /* footer - Підвал веб-сайту */
 .footer {
@@ -425,6 +418,7 @@ body {
 }
 .container_footer {
     display: flex;
+    align-items: baseline;
 }
 .address_section {
     margin-right: 70px;
@@ -498,9 +492,9 @@ body {
     border-radius: 50%;
     align-items: center;
     justify-content: space-around;
-}
-.footer_soc_icon {
-    fill: var(--primary-background-color);
+
+    color: var(--primary-background-color);
+    fill: currentColor;
 }
 
 .footer_soc_link:hover, .footer_soc_link:focus {
@@ -547,7 +541,10 @@ body {
     margin-right: -30px;
     margin-bottom: -30px;
 }
-.gallery_item:hover, .gallery_item:focus {
+.gallery_link {
+    display: block;
+}
+.gallery_link:hover, .gallery_link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .gallery_item {
